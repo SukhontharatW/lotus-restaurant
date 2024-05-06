@@ -1,0 +1,50 @@
+.seen {
+  background-color: $color-white;
+  background-color: #eee;
+  // border-bottom: 0.02rem solid $color-secondary;
+  // box-shadow: 0 2rem 2rem rgba(0, 0, 0, 0.9);
+
+  &__container {
+    max-width: 140rem;
+    margin: 0 auto;
+    padding: 2rem 4rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    color: #999;
+
+    & h4 {
+      color: $color-primary;
+    }
+  }
+  &__logos {
+    width: 100%;
+    // border: 1px solid red;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
+    grid-template-rows: max-content;
+    justify-items: center;
+    align-items: center;
+    gap: 2.6rem;
+    filter: brightness(60%);
+
+    @media screen and (max-width: 433px) {
+      gap: 0.6rem;
+    }
+
+    & img {
+      justify-self: center;
+      padding: 0 0.5rem;
+      // border: 1px solid red;
+      height: 3rem;
+      width: auto;
+      object-fit: cover;
+      @media screen and (max-width: 433px) {
+        height: 2rem;
+      }
+    }
+  }
+}

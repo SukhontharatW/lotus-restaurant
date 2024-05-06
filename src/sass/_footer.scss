@@ -1,0 +1,125 @@
+.footer {
+  &__container {
+    // border: 1px solid red;
+    max-width: 140rem;
+    margin: 0 auto;
+    padding: 16rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+  }
+  &__final {
+    // border: 1px solid red;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    @media screen and (max-width: $lg) {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    & p,
+    & a {
+      font-size: 1.4rem;
+    }
+  }
+  &__lists {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    gap: 1rem;
+    @media screen and (max-width: 430px) {
+      gap: 0.6rem;
+      justify-content: center;
+    }
+  }
+  &__link {
+    text-decoration: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3rem;
+
+    &:link,
+    &:visited {
+      color: $color-grey-dark-2;
+    }
+
+    &:hover,
+    &:active {
+      color: $color-white;
+    }
+  }
+  &__line {
+    width: 100%;
+    grid-column: 1 / span 3;
+    height: 0.025rem;
+    background-color: $color-primary;
+  }
+
+  &__start {
+    // border: 1px solid red;
+    width: 100%;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    @media screen and (max-width: $md) {
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      gap: 2rem;
+    }
+  }
+  &__logos {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    @media screen and (max-width: $md) {
+      align-items: center;
+    }
+  }
+  &__logo {
+    & img {
+      height: 3.2rem;
+    }
+  }
+  &__icons {
+    font-size: 3rem;
+    // border: 1px solid red;
+
+    & a {
+      // border: 1px solid red;
+      cursor: pointer;
+
+      & :hover {
+        color: $color-primary;
+      }
+    }
+  }
+
+  &__contact {
+    display: flex;
+    gap: 2rem;
+    @media screen and (max-width: 530px) {
+      align-items: start;
+      flex-direction: column;
+      gap: 3rem;
+    }
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+  }
+  &__icon {
+    // border: 1px solid red;
+    font-size: 3rem;
+    color: $color-primary;
+  }
+  &__text {
+    &-title {
+      // border: 1px solid red;
+      font-weight: 700;
+    }
+  }
+}

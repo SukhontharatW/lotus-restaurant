@@ -1,0 +1,69 @@
+.story {
+  background-color: $color-white;
+  &__container {
+    max-width: 140rem;
+    margin: 0 auto;
+    padding: 16rem 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6rem;
+
+    // border: 1px solid red;
+  }
+  &__reviews {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+
+    grid-row-gap: 4rem;
+    grid-column-gap: 6rem;
+
+    // border: 1px solid red;
+    @media screen and (max-width: $sm) {
+      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+      grid-row-gap: 2rem;
+      grid-column-gap: 3rem;
+    }
+    @media screen and (max-width: $xs) {
+      grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    }
+  }
+  &__review {
+    // border: 1px solid red;
+    padding: 2rem;
+    border-radius: 1rem;
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-column-gap: 1.5rem;
+    grid-row-gap: 2rem;
+    box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.3);
+    transition: all 0.2s;
+    &:hover {
+      transform: translateY(-1rem);
+    }
+  }
+  &__customer {
+    grid-row: 1 / span 2;
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 100rem;
+    // box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.3);
+    @media screen and (max-width: $xs) {
+      width: 4rem;
+      height: 4rem;
+    }
+  }
+  &__menu {
+    // text-decoration: none;
+    color: $color-primary-dark;
+    cursor: pointer;
+  }
+  &__name {
+    font-size: 1.6rem;
+    text-align: right;
+    font-weight: 500;
+    color: $color-primary;
+  }
+}

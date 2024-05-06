@@ -1,0 +1,112 @@
+.navbar {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background-color: $color-secondary;
+
+  &__container {
+    max-width: 140rem;
+    padding: 2rem 2rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // border: 1px solid red;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    & img {
+      height: 3.2rem;
+      // border: 1px solid red;
+    }
+    @media screen and (max-width: $md) {
+      align-self: start;
+    }
+  }
+  &__contect {
+    // border: 1px solid red;
+    display: flex;
+  }
+  &__main {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    // border: 1px solid red;
+  }
+
+  &__link {
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+
+    transition: all 0.2s;
+    display: inline-block;
+
+    &:link,
+    &:visited {
+      color: $color-primary;
+    }
+    &:hover,
+    &:active {
+      color: $color-white;
+    }
+    &:hover {
+      transform: translateY(-0.3rem);
+    }
+    &:active {
+      transform: translateY(-0.1rem);
+    }
+  }
+
+  &__menu {
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: $color-primary;
+    font-size: 2rem;
+    visibility: hidden;
+    opacity: 0;
+
+    &-close {
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+    }
+  }
+}
+
+@media only screen and (max-width: $md) {
+  .navbar {
+    &__responsive {
+      transform: translateY(100vh);
+    }
+
+    &__main {
+      position: fixed;
+      top: -100vh;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      background-color: $color-secondary;
+      transition: 1s;
+    }
+    &__menu {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
