@@ -2,3 +2,5 @@ Lotus Thai Restaurant is a restaurant website designed to showcase the menu, the
 
 BUILT WITH : React, Sass, Figma, HTML, CSS, JavaScript
 
+DEMO: https://lotus-thai-restaurant.netlify.app/
+
